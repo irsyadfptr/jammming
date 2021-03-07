@@ -15,8 +15,7 @@ const Spotify = {
             const expiresIn = Number(expiresInMatch[1]);
             //Will clear parameter, allowing to grab a new access token when expires.
             window.setTimeout(()=> accessToken='', expiresIn*1000);
-            window.history.pushState('Access Token', null. '/');
-            return accessToken
+            window.history.pushState('Access Token', null, '/'); return accessToken
         }
     }
 }
