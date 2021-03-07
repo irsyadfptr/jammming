@@ -6,6 +6,7 @@ export default class SearchBar extends React.Component {
     constructor (props){
         super(props);
 
+        //Empty state , changing value in searchbar
         this.state= {
             term: ''
         }
@@ -19,6 +20,7 @@ export default class SearchBar extends React.Component {
         this.props.onSearch(this.state.term);
     }
 
+    //Edit state value
     handleTermChange(event) {
         this.setState({term: event.target.value})
     }

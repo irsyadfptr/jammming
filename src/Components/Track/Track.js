@@ -8,6 +8,8 @@ export default class Track extends React.Component {
         this.addTrack = this.addTrack.bind(this);
         this.removeTrack = this.removeTrack.bind(this);
     }
+
+    //Action render
     renderAction () {
         if (this.props.isRemoval) {
             return <button className="Track-action" onClick={this.removeTrack}>-</button>

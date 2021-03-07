@@ -26,6 +26,7 @@ class App extends React.Component {
     this.search = this.search.bind(this);
   }
 
+  //SearchResult.js Props
   addTrack(track) {
     let tracks= this.state.playlistTracks;
     if (tracks.find(savedTrack => savedTrack.id === track.id)) {
@@ -36,6 +37,7 @@ class App extends React.Component {
     this.setState({playlistTracks: tracks});
   }
 
+  //Playlist.js Props
   removeTrack(track) {
     let tracks= this.state.playlistTracks;
     tracks = tracks.filter(currentTrack => currentTrack.id !== track.id);
@@ -43,14 +45,17 @@ class App extends React.Component {
     this.setState({playlistTracks: tracks})
   }
 
+  //Playlist.js Props
   updatePlaylistName(name) {
     this.setState({playlistNames: name})
   }
 
+  //Playlist.js Props
   savePlaylist() {
     const trackUris = this.state.playlistTracks.map(track => track.uri);
   }
 
+  //SearchBar.js Props
   search(term) {
     console.log(term)
   }
