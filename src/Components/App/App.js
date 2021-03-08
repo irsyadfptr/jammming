@@ -1,8 +1,9 @@
 import React from 'react'
 import './App.css';
+
+import Playlist from '../Playlist/Playlist'
 import SearchBar from '../SearchBar/SearchBar'
 import SearchResult from '../SearchResult/SearchResult'
-import Playlist from '../Playlist/Playlist'
 import Spotify from '../../util/Spotify'
 
 class App extends React.Component {
@@ -27,11 +28,11 @@ class App extends React.Component {
       playlistTracks: []
     }
 
+    this.search = this.search.bind(this);
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack= this.removeTrack.bind(this);
     this.updatePlaylistName= this.updatePlaylistName.bind(this);
     this.savePlaylist= this.savePlaylist.bind(this);
-    this.search = this.search.bind(this);
   }
 
   //SearchBar.js Props
